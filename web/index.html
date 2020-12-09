@@ -1,51 +1,258 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-        <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>VG house</title>
-    <meta name="description" content="Công Ty Vạn Gia" />
-    <meta name="keywords" content="Công Ty Vạn Gia" />
-    <meta name="author" content="Vangia.net" />
-    <link rel="canonical" href="https://vangia.net/" />
 
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/ubvpdOxvXtQm3Wzhc8u5s74XcS1fzvkypztzybXkImThEjDXQn8UTWAOGZtf0y5nNaexnSjIst1QsSL-y1JWEsBRnyAqTxY1-i9VkMv4rDepk2laVoZ7MNvPG5tk1yVSo9WsTbbKgQI=w500">
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>GCRM - Mini CRM với backend Google Sheet</title>
+  <meta name="description" content="">
+  <meta name="author" content="Thanh Nguyễn">
 
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500&amp;subset=vietnamese" rel="stylesheet">
 
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
 
-     <!-- FONT
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
-      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500&amp;subset=vietnamese" rel="stylesheet">
-    
-      <!-- CSS
-      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="custom.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="skeleton.css">
-    
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    
-
-
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../dist/images/favicon.png">
 
 </head>
 <body>
-    <div   div class="container">
-        <h1 class="section">VGmanager - V.2.0</h1>
-        <p class="section-description">Hệ thống quản lý công trình tự đông</p>
-        <p class="section-description">Thông tin liên hệ: chaulekhanhtoan@gmail.com</p>
-        <br>
-        
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="section get-help">
+    <div class="container">
+      <h3 class="section-heading">GCRM - Mini CRM với Google Sheet Backend</h3>
+      <p class="section-description">Hệ thống quản lý quan hệ khách hàng với backend Google Sheet.</p>
+      <p>[ĐT Nguyễn] từ <a href="https://hocexcel.online" target="_blank">Học Excel Online</a></p>
+      <br>
+      <!-- <a class="button button-primary" href="#">Toàn bộ khách hàng</a> -->
+      
+        <a class="button button-primary" href="#section-all-leads">Xem toàn bộ khách hàng</a><br><br><br><br>
+      <p>Vì mọi thứ được lưu trên Google Sheet, bạn có thể <strong>thêm leads mới</strong> qua 
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf32Urhm5pg4T4Z65tvwRZPfs9tD6mHT1HZ6rrpc5x6O-fwtA/viewform" target="_blank">Google Form</a>
+      </p>
+      <p>Dữ liệu thu thập được từ Google Form sẽ được lưu trên</p>
+      <a href="https://docs.google.com/spreadsheets/d/1NhIgmjBwTFeqM_faWUrBhlLtWsgjPQDfwH9-xRe1SFo/edit?usp=sharing" class="button" target="_blank">Google Sheet</a>
+      <!--<p>Phần mềm được tặng kèm khi tham gia khóa học <a href="https://hocexcel.online/course/preview/xay-dung-thanh-cong-he-thong-crm-0-dong-trong-6-gio-voi-google-sheet" target="_blank">Xây dựng thành công hệ thống CRM 0 đồng trong 6 giờ với Google Sheet</a></p>-->
     </div>
-  
-    <script src="javasript.js"></script>
+  </div>
+
+  <div class="section all-leads">
+    <div class="container">
+      <h3 class="section-heading" id="section-all-leads">Xem danh sách toàn bộ khách hàng</h3>
+      <p class="section-description">Danh sách khách hàng được sắp xếp và lấy về từ Google Sheet</p>
+      <p class="section-description">Bấm vào <strong>Họ Tên</strong> khách hàng để xem thông tin cụ thể, bấm vào <strong>Số điện thoại</strong> để thực hiện cuộc gọi.</p>
+      <br>
+      <div class="row">
+        <div class="three columns">
+          <select class="u-full-width" id="search-column">
+            <option value="id">Mã giao dịch</option>
+            <option value="name">Họ tên</option>
+            <option value="phone">Số điện thoại</option>
+            <option value="email">Email</option>
+            <option value="product">Sản phẩm</option>
+            <option value="result">Kết quả</option>
+          </select>
+        </div>
+        <div class="three columns">
+          <input class="u-full-width" type="text" placeholder="tìm kiếm ..." id="search-input">
+        </div>
+        <div class="three columns">
+          <a class="button" id="search-btn">Search</a>
+        </div>
+        <div class="three columns">
+          <p id="search-notification"></p>
+        </div>
+      </div>
+      <div class="row" style="text-align: left;">
+        <div class="six columns">
+          <a class="button" id="prev-btn">Previous</a>
+          <a class="button" id="next-btn">Next</a>
+          <a class="button" id="new-lead-btn">New Lead</a>
+        </div>
+        <div class="six columns">
+          
+        </div>
+      </div>
+      <div class="row">
+        <h5 id="all-leads-notice"></h5>
+      </div>
+      <br>
+      <div class="row" id="all-leads-table">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Mã giao dịch</th>
+              <th>Họ Tên</th>
+              <th>Số điện thoại</th>
+              <th>Mã sản phẩm</th>
+              <th>Đơn giá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ID001</td>
+              <td>Thanh N</td>
+              <td>09884757274</td>
+              <td>SP006</td>
+              <td>600.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section lead-details">
+    <div class="container">
+      <h3 class="section-heading" id="section-lead-details">Tương tác với 1 khách hàng cụ thể</h3>
+      <p class="section-description">Tương tác và cập nhật trạng thái khách hàng</p>
+      <a class="button button-primary" id = 'call-from-customer-form' href="#">Gọi điện</a>
+      <a class="button" id='send-email-customer-form' href="#">Gửi email</a>
+      <a class="button confirm-update-lead" href="javascript:void(0);">Xác nhận thông tin</a>
+      <a class="button" id='go-back' href="javascript:void(0);">Trở lại</a>
+      <br><br>
+      <div class="row">
+        <h5 id="lead-details-notice">Xin mời bắt đầu thao tác từ <a href="#section-all-leads">danh sách khách hàng</a></h5>
+      </div>
+      <form id="customer-form">
+        <div class="row">
+          <div class="four columns">
+            <label for="customer-name">Tên khách hàng</label>
+            <input class="u-full-width" type="text" placeholder="Thanh Nguyễn" id="customer-name" readonly="readonly">
+          </div>
+          <div class="four columns">
+            <label for="customer-phone">Số điện thoại</label>
+            <input class="u-full-width" type="text" placeholder="012345567" id="customer-phone" readonly="readonly">
+          </div>
+          <div class="four columns">
+            <label for="customer-email">Email</label>
+            <input class="u-full-width" type="email" placeholder="listen@hocexcel.online" id="customer-email" readonly="readonly">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="six columns">
+            <label for="order-date">Ngày đặt hàng</label>
+            <input class="u-full-width" type="text" placeholder="23/04/2018" id="order-date" readonly="readonly">
+          </div>
+          <div class="six columns">
+            <label for="last-activity-timestamp">Thời gian tương tác lần trước</label>
+            <input class="u-full-width" type="text" placeholder="18/01/2018" id="last-activity-timestamp" readonly="readonly">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="six columns">
+            <label for="product-name">Tên sản phẩm</label>
+            <input class="u-full-width" type="text" placeholder="Awesome product" id="product-name" readonly="readonly">
+          </div>
+          <div class="six columns">
+            <label for="product-price">Giá trị</label>
+            <input class="u-full-width" type="text" placeholder="600.000" id="product-price" readonly="readonly">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="two columns">
+            <label for="call-1">Gọi lần 1</label>
+            <select class="u-full-width" id="call-1">
+              <option value="0">Chưa gọi</option>
+              <option value="1">Đã gọi</option>
+            </select>
+          </div>
+          <div class="four columns">
+            <label for="status-1">Trạng thái cuộc gọi 1</label>
+            <select class="u-full-width" id="status-1">
+              <option value=""></option>
+              <option value="Nhấc máy">Nhấc máy</option>
+              <option value="Không nhấc máy">Không nhấc máy</option>
+              <option value="Gọi lại sau">Gọi lại sau</option> 
+            </select>
+          </div>
+          <div class="six columns">
+            <label for="note-1">Ghi chú</label>
+            <textarea class="u-full-width" type="text" placeholder="" id="note-1"></textarea>
+          </div>
+        <div class="row">
+          <div class="two columns">
+            <label for="call-2">Gọi lần 2</label>
+            <select class="u-full-width" id="call-2">
+              <option value="0">Chưa gọi</option>
+              <option value="1">Đã gọi</option>
+            </select>
+          </div>
+          <div class="four columns">
+            <label for="status-2">Trạng thái cuộc gọi 2</label>
+            <select class="u-full-width" id="status-2">
+              <option value=""></option>
+              <option value="Nhấc máy">Nhấc máy</option>
+              <option value="Không nhấc máy">Không nhấc máy</option>
+              <option value="Gọi lại sau">Gọi lại sau</option> 
+            </select>
+          </div>
+          <div class="six columns">
+            <label for="call-result">Kết quả</label>
+            <select class="u-full-width" id="call-result">
+              <option value=""></option>
+              <option value="Success">Thành công</option>
+              <option value="Not Success">Không thành công</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="two columns">
+            <label for="call-3">Gọi lần 3</label>
+            <select class="u-full-width" id="call-3">
+              <option value="0">Chưa gọi</option>
+              <option value="1">Đã gọi</option>
+            </select>
+          </div>
+          <div class="four columns">
+            <label for="status-3">Trạng thái cuộc gọi 3</label>
+            <select class="u-full-width" id="status-3">
+              <option value=""></option>
+              <option value="Nhấc máy">Nhấc máy</option>
+              <option value="Không nhấc máy">Không nhấc máy</option>
+              <option value="Gọi lại sau">Gọi lại sau</option> 
+            </select>
+          </div>
+          <div class="six columns">
+            <label>Xác nhận thông tin</label>
+            <a class="button button-primary u-full-width confirm-update-lead" href="javascript:void(0);">Xác nhận thông tin</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <a href="#" id="back-to-top-btn" title="Go to top">Top</a>
+
+  <script src="js/app2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', app.init);
+  </script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
